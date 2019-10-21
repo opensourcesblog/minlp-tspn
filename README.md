@@ -7,10 +7,13 @@ To run it you have to download [Julia](https://julialang.org/downloads/) and ins
 
 You can use 
 ```
-Pkg.add("JuMP")
-Pkg.add("Junipper")
-Pkg.add("Ipopt")
-Pkg.add("Distances")
+] add JuMP
+] add Junipper
+] add Ipopt
+] add Distances
+
+include("tspn.jl")
+solve_tspn(;file_name="tspn_25", relax=false)
 ```
 
 I visualized the problem using [d3](https://d3js.org).
